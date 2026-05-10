@@ -1,0 +1,14 @@
+services:
+  level1:
+    build: ./Level1
+    container_name: jwt-lab-level1
+    ports:
+      - "8001:5000"
+    restart: always
+  level2:
+    build: ./Level2
+    container_name: jwt-lab-level2
+    ports:
+      - "8002:5000"
+    restart: always
+  # 后续关卡可以依次往后排端口，如 8002, 8003...
